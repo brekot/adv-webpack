@@ -3,9 +3,9 @@
 //@import "./grid/ms/grid.ms";
 
 @import "./grid/container";
-@import "./grid/col";
-@import "./grid/order";
-@import "./grid/offset";
+//@import "./grid/col";
+//@import "./grid/order";
+//@import "./grid/offset";
 
 @each $breakpoint in map-keys($grid-breakpoints)
 {
@@ -13,7 +13,7 @@
     {
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-        .d#{$infix}-none { display: none !important; }
+/*        .d#{$infix}-none { display: none !important; }
         .d#{$infix}-inline { display: inline !important; }
         .d#{$infix}-inline-block { display: inline-block !important; }
         .d#{$infix}-block { display: block !important; }
@@ -69,7 +69,7 @@
 
         .position#{$infix}-fixed { position: fixed !important; }
         .position#{$infix}-static { position: static !important; }
-        .position#{$infix}-absolute { position: absolute !important; }
+        .position#{$infix}-absolute { position: absolute !important; } */
         .position#{$infix}-relative { position: relative !important; }
     }
 }

@@ -1,6 +1,13 @@
 :root {
     --black: #000;
     --white: #FFF;
+
+    --color1: #bc78ff;
+    --color2: #a870f3;
+    --color3: #211a2c;
+    --color4: #453775;
+
+    --green: #66a197;
 }
 
 $grid-breakpoints: (
@@ -8,14 +15,14 @@ $grid-breakpoints: (
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px
+    xl: 1250px
 );
 
 $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 1140px
+    xl: 1200px
 );
 
 $gutter: 30px;
