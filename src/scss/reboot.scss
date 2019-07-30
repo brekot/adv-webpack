@@ -26,6 +26,7 @@ body {
     background-color: var(--white);
 }
 
+
 [tabindex="-1"]:focus {
     outline: 0 !important;
 }
@@ -46,6 +47,34 @@ h1, .h1 {
     font-size: 45px;
     line-height: 65px;
     text-transform: uppercase;
+}
+
+h2, .h2 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+h3, .h3 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.2;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+h4, .h4 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+.white-color {
+    color: var(--white);
 }
 
 p {
@@ -152,10 +181,10 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+    margin: 0;
+    font-family: 'Panton', Arial, sans-serif;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 button,

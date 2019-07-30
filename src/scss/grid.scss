@@ -61,7 +61,7 @@
         .align-self#{$infix}-end      { align-self: flex-end !important; }
         .align-self#{$infix}-center   { align-self: center !important; }
         .align-self#{$infix}-baseline { align-self: baseline !important; }
-        .align-self#{$infix}-stretch  { align-self: stretch !important; }
+        .align-self#{$infix}-stretch  { align-self: stretch !important; } */
 
         .text#{$infix}-left   { text-align: left !important; }
         .text#{$infix}-right  { text-align: right !important; }
@@ -69,7 +69,7 @@
 
         .position#{$infix}-fixed { position: fixed !important; }
         .position#{$infix}-static { position: static !important; }
-        .position#{$infix}-absolute { position: absolute !important; } */
+        .position#{$infix}-absolute { position: absolute !important; }
         .position#{$infix}-relative { position: relative !important; }
     }
 }
