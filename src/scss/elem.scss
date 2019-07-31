@@ -1,3 +1,95 @@
+h1, .h1 {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+h2, .h2 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+h3, .h3 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.2;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+h4, .h4 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--color3);
+    text-transform: uppercase;
+}
+
+@include media-breakpoint-only(md)
+{
+    .h1, h1 {
+        font-size: 36px;
+        line-height: 52px;
+    }
+    .h2, h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+@include media-breakpoint-only(sm)
+{
+    .h1, h1 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .h2, h2 {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .h4, h4 {
+        font-size: 22px;
+    }
+}
+
+.white-color {
+    color: var(--white);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--grey5);
+    font-weight: 600;
+    padding: 0 0 0 25px;
+    margin: 0 0 20px;
+    position: relative;
+
+    &:before {
+        background-color: var(--color2);
+        content: "";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 0;
+        top: 8px;
+    }
+    &:last-child {
+        margin: 0;
+    }
+}
+
+
 .btn-first {
     background-color: var(--color2);
     box-shadow: 0 4px 7.6px .4px rgba(115,57,192,.35);
@@ -31,6 +123,14 @@
 
     &:hover {
         background-color: var(--color4);
+    }
+}
+
+@include media-breakpoint-only(sm)
+{
+    .btn-first,
+    .btn-second {
+        padding: 0 35px;
     }
 }
 
