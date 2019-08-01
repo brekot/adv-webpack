@@ -13,7 +13,7 @@
     {
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-/*        .d#{$infix}-none { display: none !important; }
+        .d#{$infix}-none { display: none !important; }
         .d#{$infix}-inline { display: inline !important; }
         .d#{$infix}-inline-block { display: inline-block !important; }
         .d#{$infix}-block { display: block !important; }
@@ -23,7 +23,7 @@
         .d#{$infix}-flex { display: flex !important; }
         .d#{$infix}-inline-flex { display: inline-flex !important; }
 
-        .flex#{$infix}-row            { flex-direction: row !important; }
+/*        .flex#{$infix}-row            { flex-direction: row !important; }
         .flex#{$infix}-column         { flex-direction: column !important; }
         .flex#{$infix}-row-reverse    { flex-direction: row-reverse !important; }
         .flex#{$infix}-column-reverse { flex-direction: column-reverse !important; }

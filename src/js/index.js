@@ -32,4 +32,9 @@ $(function() {
             disabledClass: block_name + '__str-disabled',
         },
     });
+
+    $('.header-main__hamburger').click(function(){
+
+        $('.nav-top').slideToggle();
+    });
 });

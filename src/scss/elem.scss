@@ -54,6 +54,23 @@ h4, .h4 {
         font-size: 22px;
     }
 }
+@include media-breakpoint-only(xs)
+{
+    .h1, h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .h2, h2 {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .h3, h3 {
+        font-size: 20px;
+    }
+    .h4, h4 {
+        font-size: 22px;
+    }
+}
 
 .white-color {
     color: var(--white);
@@ -131,6 +148,18 @@ li {
     .btn-first,
     .btn-second {
         padding: 0 35px;
+    }
+}
+@include media-breakpoint-only(xs)
+{
+    .btn-first {
+        font-size: 18px;
+        padding: 0 25px;
+    }
+    .btn-second {
+        font-size: 16px;
+        padding: 0;
+        width: 100%;
     }
 }
 

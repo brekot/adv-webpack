@@ -41,6 +41,9 @@
             transform: translate(0, -50%);
         }
     }
+    &__hamburger {
+        display: none;
+    }
 }
 
 @include media-breakpoint-only(xxl)
@@ -63,7 +66,7 @@
         }
     }
 }
-@include media-breakpoint-between(md, lg)
+@include media-breakpoint-down(lg)
 {
     .header-main {
 
@@ -75,10 +78,41 @@
 @include media-breakpoint-down(sm)
 {
     .header-main {
+        top: 20px;
 
-        &__slog,
-        &__center-box {
-            display: none;
+        &__phone {
+            margin: 0 10px;
+            white-space: nowrap;
+        }
+        &__hamburger {
+            display: flex;
+            height: 20px;
+            align-items: center;
+
+            &-icon {
+                background-color: var(--white);
+                height: 2px;
+                width: 25px;
+                display: block;
+                position: relative;
+
+                &:before,
+                &:after {
+                    content: "";
+                    background-color: var(--white);
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+                &:before {
+                    top: 6px;
+                }
+                &:after {
+                    bottom: 6px;
+                }
+            }
         }
     }
 }
@@ -89,7 +123,6 @@
     &__link {
         text-transform: uppercase;
         font-size: 15px;
-        color: var(--white);
 
         &:not(:last-child) {
             margin: 0 35px 0 0;
@@ -97,6 +130,15 @@
     }
 }
 
+@include media-breakpoint-up(md)
+{
+    .nav-top {
+
+        &__link {
+            color: var(--white);
+        }
+    }
+}
 @include media-breakpoint-only(md)
 {
     .nav-top {
@@ -107,6 +149,27 @@
             &:not(:last-child) {
                 margin: 0 10px 0 0;
             }
+        }
+    }
+}
+@include media-breakpoint-down(sm)
+{
+    .nav-top {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        transform: translate(0, 100%);
+        background-color: var(--white);
+        padding: 15px 0;
+
+        &__link {
+            display: block;
+            text-align: center;
+            margin: 0 !important;
+            line-height: 40px;
+            font-weight: 700;
         }
     }
 }
@@ -157,6 +220,7 @@
     &__logo {
         display: block;
         width: 65px;
+        margin: auto;
     }
     &__center-box {
         display: flex;
@@ -165,6 +229,7 @@
     &__soc {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     &__fb,
     &__vk,
@@ -282,6 +347,50 @@
         }
     }
 }
+@include media-breakpoint-only(xs)
+{
+    .footer-top {
+        height: auto;
+        padding: 25px 0;
+
+        &__left-box,
+        &__right-box {
+            width: 100%;
+        }
+        &__right-box {
+            margin: 25px 0 0;
+        }
+        &__text-one,
+        &__text-two,
+        &__text-three {
+            font-size: 18px;
+        }
+        &__text-one,
+        &__text-two {
+            margin: 0 0 15px;
+        }
+    }
+    .footer-bottom {
+        padding: 35px 0;
+        text-align: center;
+
+        &__container {
+            display: block;
+        }
+        &__center-box {
+            display: block;
+        }
+        &__soc {
+            margin: 15px 0 15px 25px;
+        }
+        &__phone {
+            margin: 0;
+        }
+        &__right-box {
+            margin: 20px 0 0;
+        }
+    }
+}
 
 // Первый блок
 .block-first {
@@ -327,12 +436,35 @@
 @include media-breakpoint-only(sm)
 {
     .block-first {
-        min-height: 670px;
-        padding: 155px 0 0;
+        min-height: 645px;
+        padding: 120px 0 0;
 
         &__desc {
             font-size: 14px;
             margin: 30px 0 60px;
+        }
+    }
+}
+@include media-breakpoint-only(xs)
+{
+    .block-first {
+        min-height: auto;
+        padding: 120px 0;
+
+        &__desc {
+            font-size: 14px;
+            margin: 30px 0;
+
+            br {
+                display: none;
+            }
+        }
+        &__text {
+            margin: 30px 0 0;
+
+            br {
+                display: none;
+            }
         }
     }
 }
@@ -396,6 +528,20 @@
         }
     }
 }
+@include media-breakpoint-only(xs)
+{
+    .block-second {
+        padding: 70px 0 0;
+
+        &__items {
+            margin: 0;
+        }
+        &__item {
+            width: 100%;
+            margin: 50px 0 0;
+        }
+    }
+}
 
 // Как мы работаем
 .block-work {
@@ -420,20 +566,6 @@
         height: 180px;
         padding: 35px 50px 0 20px;
         border-top: 1px solid var(--white);
-
-        &:nth-child(2n) {
-            border-left: 1px solid var(--white);
-        }
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(6) {
-            background-color: rgba(60, 89, 83, .7);
-        }
-        &:nth-child(1),
-        &:nth-child(4),
-        &:nth-child(5) {
-            background-color: rgba(74, 62, 86, .7);
-        }
     }
     &__name {
         font-size: 18px;
@@ -446,6 +578,38 @@
     }
 }
 
+@include media-breakpoint-up(sm)
+{
+    .block-work {
+
+        &__item {
+
+            &:nth-child(2n) {
+                border-left: 1px solid var(--white);
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(6) {
+                background-color: rgba(60, 89, 83, .7);
+            }
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(5) {
+                background-color: rgba(74, 62, 86, .7);
+            }
+        }
+    }
+}
+@include media-breakpoint-down(lg)
+{
+    .block-work {
+
+        &__name br,
+        &__text br {
+            display: none;
+        }
+    }
+}
 @include media-breakpoint-only(lg)
 {
     .block-work {
@@ -455,10 +619,6 @@
         }
         &__name {
             margin: 0 0 15px;
-        }
-        &__name br,
-        &__text br {
-            display: none;
         }
     }
 }
@@ -471,9 +631,27 @@
             padding: 20px;
             height: auto;
         }
-        &__name br,
-        &__text br {
-            display: none;
+    }
+}
+@include media-breakpoint-only(xs)
+{
+    .block-work {
+        padding: 70px 0;
+
+        &__item {
+            padding: 15px;
+            height: auto;
+            width: 100%;
+
+            &:nth-child(2n) {
+                background-color: rgba(60, 89, 83, .7);
+            }
+            &:nth-child(2n+1) {
+                background-color: rgba(74, 62, 86, .7);
+            }
+        }
+        &__name {
+            margin: 0 0 10px;
         }
     }
 }
@@ -565,6 +743,22 @@
         }
     }
 }
+@include media-breakpoint-only(xs)
+{
+    .block-result {
+        height: auto;
+        padding: 70px 0;
+
+        &__title {
+            margin: 0 0 30px;
+        }
+        &__prev,
+        &__next {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
 
 // Тарифы
 .block-rate {
@@ -575,6 +769,7 @@
         display: flex;
         justify-content: center;
         padding: 75px 0 0;
+        flex-wrap: wrap;
     }
     &__part {
         max-width: 370px;
@@ -582,10 +777,6 @@
         padding: 0 0 180px;
         position: relative;
         background-color: var(--white);
-
-        &:first-child {
-            margin: 0 30px 0 0;
-        }
     }
     &__name {
         background-color: var(--green1);
@@ -617,6 +808,18 @@
     }
 }
 
+@include media-breakpoint-up(sm)
+{
+    .block-rate {
+
+        &__part {
+
+            &:first-child {
+                margin: 0 30px 0 0;
+            }
+        }
+    }
+}
 @include media-breakpoint-only(md)
 {
     .block-rate {
@@ -649,6 +852,33 @@
         }
         &__price {
             font-size: 38px;
+        }
+    }
+}
+@include media-breakpoint-only(xs)
+{
+    .block-rate {
+        padding: 70px 0 0;
+
+        &__block {
+            padding: 30px 0 0;
+        }
+        &__part {
+            width: 100%;
+            margin: 20px 0 0;
+        }
+        &__name {
+            height: 100px;
+            font-size: 20px;
+        }
+        &__text {
+            padding: 20px;
+        }
+        &__price {
+            font-size: 38px;
+        }
+        &__bottom {
+            padding: 0 20px;
         }
     }
 }
@@ -736,6 +966,24 @@
         }
     }
 }
+@include media-breakpoint-only(xs)
+{
+    .block-task {
+        padding: 80px 0 50px;
+
+        &__title {
+            font-size: 22px;
+            margin: 0 0 50px;
+
+            &:after {
+                display: none;
+            }
+        }
+        &__text {
+            padding: 20px 0 50px;
+        }
+    }
+}
 
 // Гарантии
 .block-warranty {
@@ -753,7 +1001,7 @@
     }
 }
 
-@include media-breakpoint-between(sm, md)
+@include media-breakpoint-down(md)
 {
     .block-warranty {
         padding: 80px 0;
@@ -841,7 +1089,7 @@
         }
     }
 }
-@include media-breakpoint-only(sm)
+@include media-breakpoint-down(sm)
 {
     .block-decision {
         background: none;
