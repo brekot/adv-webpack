@@ -185,3 +185,18 @@ li {
         padding: 0 25px;
     }
 }
+
+.alert {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.alert-danger {
+    color: var(--red1);
+    border: 2px solid var(--red1);
+}
+.alert-success {
+    color: var(--green1);
+    border: 2px solid var(--green1);
+}
