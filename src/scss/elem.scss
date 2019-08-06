@@ -200,3 +200,38 @@ li {
     color: var(--green1);
     border: 2px solid var(--green1);
 }
+
+.fancybox-bg {
+    background: rgb(94, 48, 156);
+}
+.fancybox-is-open .fancybox-bg {
+    opacity: .8;
+}
+
+.fancy-form {
+    background: none;
+
+    &__title {
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--white);
+        text-align: center;
+        margin: 0 0 30px;
+    }
+    &__block {
+        display: flex;
+    }
+    &__part {
+        width: 250px;
+        padding: 0 5px;
+    }
+
+    .fancybox-close-small {
+        padding: 0;
+        color: var(--white);
+        opacity: 1;
+        position: fixed;
+        right: 45px;
+        top: 35px;
+    }
+}
